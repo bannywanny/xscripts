@@ -3,4 +3,9 @@ local args = {
     [2] = game:GetService('Players').LocalPlayer.Character.Humanoid:FindFirstChildOfClass('Tool')
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("HotbarRemotes"):WaitForChild("ToolEvent"):FireServer(unpack(args))
+local remote = game:GetService("ReplicatedStorage"):WaitForChild("HotbarRemotes"):WaitForChild("ToolEvent")
+
+repeat
+    remote:FireServer(unpack(args))
+    wait(0.01)
+until false
