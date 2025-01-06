@@ -1,19 +1,10 @@
---[[
-works best if used on awp or wave
-nukes pending hubs to ratelimit and ruin events
-put in autoexec
-DO NOT USE IF UR ON CODEX
---]]
-
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 local PlaceId = game.PlaceId
 local JobId = game.JobId
 local player = Players.LocalPlayer
 
-if not game:IsLoaded() then
-    game.Loaded:Wait()
-end
+player.CharacterAdded:Wait()
 
 while true do
     local g = Players:GetChildren()
