@@ -1,7 +1,8 @@
 --[[
+works best if used on awp or wave
 nukes pending hubs to ratelimit and ruin events
 put in autoexec
-if you're on codex i wouldnt use this if i were u cuz youll get in a infinite rejoin loop if u put this in autoexec
+DO NOT USE IF UR ON CODEX
 --]]
 
 local Players = game:GetService("Players")
