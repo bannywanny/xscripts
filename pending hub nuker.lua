@@ -10,12 +10,10 @@ local TeleportService = game:GetService("TeleportService")
 local PlaceId = game.PlaceId
 local JobId = game.JobId
 
-game.Players.LocalPlayer.CharacterAdded:Wait()
-
 while true do
     local g = Players:GetChildren()
     if #g >= 1 then
-        player:Kick("v64")
+        Players.LocalPlayer:Kick("v64")
         wait(1/10)
         TeleportService:Teleport(PlaceId, player)
     else
