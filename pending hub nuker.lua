@@ -11,6 +11,10 @@ local PlaceId = game.PlaceId
 local JobId = game.JobId
 local player = Players.LocalPlayer
 
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
 while true do
     local g = Players:GetChildren()
     if #g >= 1 then
