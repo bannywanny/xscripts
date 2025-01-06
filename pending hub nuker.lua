@@ -9,9 +9,8 @@ local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 local PlaceId = game.PlaceId
 local JobId = game.JobId
-local player = Players.LocalPlayer
 
-player.CharacterAdded:Wait()
+game.Players.LocalPlayer.CharacterAdded:Wait()
 
 while true do
     local g = Players:GetChildren()
