@@ -17,7 +17,7 @@ while true do
     local g = Players:GetChildren()
     if #g >= 1 then
         player:Kick("v64")
-        wait()
+        wait(1/10)
         TeleportService:Teleport(PlaceId, player)
     else
         TeleportService:TeleportToPlaceInstance(PlaceId, JobId, player)
