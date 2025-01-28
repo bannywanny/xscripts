@@ -57,12 +57,12 @@ btns:Seperator();
 
 local tgls = serv:Channel("Toggles");
 
+local RunService: RunService = game:GetService("RunService");
 tgls:Toggle("damage poison (basically poisons enemies when u hit\nthem as long as you stay in close range of them)", false, function(bool)
-    local RunService: RunService = game:GetService("RunService");
-        RunService.RenderStepped:Connect(function()
+        while task.wait(1/20) do
         local args = {[1] = workspace:WaitForChild("World"):WaitForChild("Mobs"):WaitForChild("Entity")};
         game:GetService("ReplicatedStorage"):WaitForChild("Universe"):WaitForChild("Network"):WaitForChild("Remotes"):WaitForChild("DamageFire"):FireServer(unpack(args));
-    end)
+    end
 end)
 
 tgls:Seperator()
