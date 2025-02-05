@@ -20,5 +20,5 @@ while true do
         TeleportService:TeleportToPlaceInstance(PlaceId, JobId, player)
     end
     
-    wait(0.75)
+    wait(1) -- any lower and pending hubs wont send your info to the reserve server before you can rejoin
 end
