@@ -1,12 +1,17 @@
 --!strict
 
 --[[
-KYOUKASUIGETSU SHIKAI V1
+KYOUKASUIGETSU SHIKAI V1.1
 Created by D3M0NG0D Clan member(s): banovion, XPLTACY
 TankAmp script made with a reach method not many have thought of
 Not streamproof nor will ever be streamproof
 --]]
 
+getgenv().AIZEN = {
+    ["Enabled"] = true,
+    ["Tank"] = true,
+    ["Amp"] = true
+}
 
 --// Variables \\--
 
@@ -28,6 +33,7 @@ local D3M0NTARG3TGR1P = CFrame.new(
 --// My life is a boundless asylum, years feel like days and days feel as though the world simply passes me by as I watch in hopeless despair... \\--
 
 RunService.Heartbeat:Connect(function()
+ if not (AIZEN["Enabled"] and AIZEN["Tank"]) then return end
     for ACCURSED, ANGELIC_MUST_KILL in ipairs(Players:GetPlayers()) do
         if ANGELIC_MUST_KILL ~= Player then
             local Angelsmustdie = ANGELIC_MUST_KILL.Character;
@@ -50,6 +56,7 @@ end)
 --// above is the tank below is the amp \\--
 
 RunService.Heartbeat:Connect(function()
+if not (AIZEN["Enabled"] and AIZEN["Amp"]) then return end
     for BLASPHEMOUS, MUSTDIE in ipairs(Players:GetPlayers()) do
         if MUSTDIE ~= Player and MUSTDIE.Character then
             local MUSTDIETORSO = MUSTDIE.Character:FindFirstChild("Torso")
