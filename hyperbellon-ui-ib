@@ -95,9 +95,9 @@ local function clickEffect(options)
 end
 
 function Library:Toggle(value)
-    if game:GetServer("CoreGui"):FindFirstChild("Neverlose") == nil then return end
-    enabled = (type(value) == "boolean" and value) or game:GetServer("CoreGui"):FindFirstChild("Neverlose").Enabled
-    game:GetServer("CoreGui"):FindFirstChild("Neverlose").Enabled = not enabled
+    if game:GetService("CoreGui"):FindFirstChild("Neverlose") == nil then return end
+    enabled = (type(value) == "boolean" and value) or game:GetService("CoreGui"):FindFirstChild("Neverlose").Enabled
+    game:GetService("CoreGui"):FindFirstChild("Neverlose").Enabled = not enabled
 end
 
 function Library:Window(options)
